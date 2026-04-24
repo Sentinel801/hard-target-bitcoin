@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Basics for Bitcoin Holders | Hard Target Bitcoin</title>
+  <meta name="description" content="How names, addresses, social media, and platform footprints combine into a profile that exposes Bitcoin holders to physical coercion and wrench attacks." />
+  <meta property="og:title" content="Privacy Basics for Bitcoin Holders | Hard Target Bitcoin" />
+  <meta property="og:description" content="How names, addresses, social media, and platform footprints combine into a profile that exposes Bitcoin holders to physical coercion and wrench attacks." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://hardtargetbitcoin.com/bitcoin-privacy-basics-guide.html" />
+  <meta property="og:image" content="./assets/social-privacy.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Basics for Bitcoin Holders | Hard Target Bitcoin" />
+  <meta name="twitter:description" content="How names, addresses, social media, and platform footprints combine into a profile that exposes Bitcoin holders to physical coercion and wrench attacks." />
+  <meta name="twitter:image" content="./assets/social-privacy.svg" />
+  <link rel="canonical" href="https://hardtargetbitcoin.com/bitcoin-privacy-basics-guide.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root,[data-theme="light"]{--text-xs:clamp(.75rem,.7rem + .25vw,.875rem);--text-sm:clamp(.875rem,.8rem + .35vw,1rem);--text-base:clamp(1rem,.95rem + .25vw,1.125rem);--text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--color-bg:#f7f6f2;--color-surface:#f9f8f5;--color-surface-2:#fbfbf9;--color-surface-offset:#f3f0ec;--color-border:#d4d1ca;--color-divider:#dcd9d5;--color-text:#28251d;--color-text-muted:#7a7974;--color-text-faint:#bab9b4;--color-primary:#8d6a18;--radius-md:.5rem;--radius-lg:.75rem;--radius-xl:1rem;--radius-full:9999px;--shadow-sm:0 1px 2px rgba(20,18,15,.06);--shadow-md:0 10px 30px rgba(20,18,15,.08);--content-wide:1180px;--content-prose:760px;--font-display:'Instrument Serif',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;--transition:180ms cubic-bezier(0.16,1,0.3,1)}
+    [data-theme="dark"]{--color-bg:#171614;--color-surface:#1c1b19;--color-surface-2:#201f1d;--color-surface-offset:#242320;--color-border:#393836;--color-divider:#262523;--color-text:#e9e4da;--color-text-muted:#a8a39a;--color-text-faint:#6e6a63;--color-primary:#b8891e;--shadow-sm:0 1px 2px rgba(0,0,0,.2);--shadow-md:0 18px 50px rgba(0,0,0,.3)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth}body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.7;background:var(--color-bg);color:var(--color-text);min-height:100dvh;background-image:radial-gradient(circle at top left, rgba(184,137,30,.08), transparent 18%)}img,svg{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:none;transition:color var(--transition),background var(--transition),border-color var(--transition)}button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}h1,h2,h3{font-family:var(--font-display);font-weight:400;letter-spacing:-.03em;line-height:1.05}p{max-width:72ch;text-wrap:pretty}ul{padding-left:1.1rem}li+li{margin-top:.6rem}.container{width:min(calc(100% - 2rem),var(--content-wide));margin-inline:auto}.prose{width:min(calc(100% - 2rem),var(--content-prose));margin-inline:auto}.site-header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--color-bg) 86%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid color-mix(in srgb,var(--color-border) 72%,transparent)}.header-inner{min-height:5rem;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}.brand{display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);font-weight:700;letter-spacing:.12em;text-transform:uppercase}.brand-mark{width:2.5rem;height:2.5rem;border-radius:var(--radius-md);border:1px solid color-mix(in srgb,var(--color-primary) 45%,var(--color-border));display:grid;place-items:center;background:linear-gradient(180deg,color-mix(in srgb,var(--color-primary) 10%,var(--color-surface)),var(--color-surface))}.brand-mark svg{width:1.15rem;height:1.15rem;color:var(--color-primary)}.header-actions{display:flex;align-items:center;gap:var(--space-3)}.theme-toggle,.nav-link{height:2.75rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;justify-content:center}.nav-link{padding:0 1rem;border:1px solid var(--color-border);background:var(--color-surface);font-size:var(--text-sm)}.theme-toggle{width:2.75rem;border:1px solid var(--color-border);background:var(--color-surface)}.hero{padding:clamp(var(--space-12),9vw,var(--space-20)) 0 var(--space-10)}.eyebrow,.tag{display:inline-flex;align-items:center;padding:.5rem .85rem;border-radius:var(--radius-full);font-size:var(--text-xs);letter-spacing:.12em;text-transform:uppercase;color:var(--color-primary);background:color-mix(in srgb,var(--color-primary) 9%,transparent);border:1px solid color-mix(in srgb,var(--color-primary) 28%,var(--color-border))}.hero h1{font-size:clamp(3rem,7vw,5rem);max-width:12ch;margin-top:var(--space-6)}.hero .dek{font-size:var(--text-lg);color:var(--color-text-muted);max-width:38ch;margin-top:var(--space-5)}.meta-row{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-6)}.meta-pill{padding:.55rem .9rem;border-radius:var(--radius-full);background:var(--color-surface);border:1px solid var(--color-border);font-size:var(--text-sm);color:var(--color-text-muted)}.article-layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:var(--space-8);padding:var(--space-10) 0 var(--space-16)}.sidebar{position:sticky;top:6rem;align-self:start;padding:var(--space-5);border:1px solid color-mix(in srgb,var(--color-border) 84%,transparent);border-radius:var(--radius-xl);background:linear-gradient(180deg,color-mix(in srgb,var(--color-surface-2) 70%,transparent),var(--color-surface));box-shadow:var(--shadow-sm)}.sidebar h3{font-size:var(--text-lg);margin-bottom:var(--space-4)}.sidebar ul{list-style:none;padding-left:0}.sidebar li+li{margin-top:.8rem}.sidebar a{color:var(--color-text-muted)}.sidebar a:hover{color:var(--color-text)}.article-main section+section{margin-top:var(--space-10)}.article-main h2{font-size:clamp(2rem,4vw,3.25rem);margin-bottom:var(--space-4)}.article-main p+p,.article-main ul{margin-top:var(--space-4)}.callout{margin-top:var(--space-8);padding:var(--space-5);border-left:2px solid var(--color-primary);background:color-mix(in srgb,var(--color-primary) 8%,transparent);border-radius:0 var(--radius-lg) var(--radius-lg) 0}.related{margin-top:var(--space-12);padding-top:var(--space-8);border-top:1px solid color-mix(in srgb,var(--color-divider) 82%,transparent)}.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-5);margin-top:var(--space-5)}.card{padding:var(--space-6);border-radius:var(--radius-xl);border:1px solid color-mix(in srgb,var(--color-border) 88%,transparent);background:linear-gradient(180deg,color-mix(in srgb,var(--color-surface-2) 70%,transparent),var(--color-surface));box-shadow:var(--shadow-sm)}.card h3{font-size:var(--text-lg);margin-top:var(--space-4)}.card p{margin-top:var(--space-3);color:var(--color-text-muted)}.jump{display:inline-flex;align-items:center;gap:.5rem;margin-top:var(--space-5);font-size:var(--text-sm);font-weight:600}.site-footer{padding:var(--space-12) 0 var(--space-10);border-top:1px solid color-mix(in srgb,var(--color-divider) 82%,transparent)}.footer-copy{font-size:var(--text-sm);color:var(--color-text-muted)}@media (max-width:980px){.article-layout,.related-grid{grid-template-columns:1fr}.sidebar{position:relative;top:auto}}@media (max-width:720px){.hero h1{font-size:clamp(2.6rem,12vw,4rem)}.hero .dek{font-size:var(--text-base)}}
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://hardtargetbitcoin.com/#organization",
+      "name": "Hard Target Bitcoin",
+      "url": "https://hardtargetbitcoin.com/"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hardtargetbitcoin.com/#founder",
+      "name": "Hard Target Bitcoin Founder",
+      "description": "Founder with 21 years in prosecution and federal investigations focused on criminal risk and security education."
+    },
+    {
+      "@type": "Article",
+      "@id": "https://hardtargetbitcoin.com/bitcoin-privacy-basics-guide.html#primary",
+      "mainEntityOfPage": "https://hardtargetbitcoin.com/bitcoin-privacy-basics-guide.html",
+      "headline": "Privacy Basics for Bitcoin Holders",
+      "description": "How names, addresses, social media, and platform footprints combine into a profile that exposes Bitcoin holders to physical coercion and wrench attacks.",
+      "datePublished": "2026-04-23",
+      "dateModified": "2026-04-23",
+      "author": {
+        "@id": "https://hardtargetbitcoin.com/#founder"
+      },
+      "publisher": {
+        "@id": "https://hardtargetbitcoin.com/#organization"
+      },
+      "image": [
+        "https://hardtargetbitcoin.com/assets/social-privacy.svg"
+      ]
+    }
+  ]
+}
+  </script>
+</head><body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand" aria-label="Hard Target Bitcoin home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 20 6.5V12c0 5.2-3.2 8.3-8 10-4.8-1.7-8-4.8-8-10V6.5L12 2Z"></path><path d="M8 12h8M12 8v8"></path></svg></span><span>Hard Target Bitcoin</span></a>
+      <div class="header-actions">
+        <a class="nav-link" href="./library-hub.html">Library Hub</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="prose">
+        <div class="eyebrow">Guide</div>
+        <h1>Privacy Basics for Bitcoin Holders</h1>
+        <p class="dek">How names, addresses, social media, and platform footprints combine into a profile that exposes Bitcoin holders to physical coercion and wrench attacks.</p>
+        <div class="meta-row"><span class="meta-pill">Guide</span><span class="meta-pill">Privacy</span><span class="meta-pill">Operational Security</span></div>
+      </div>
+    </section>
+    <div class="container article-layout">
+      <aside class="sidebar">
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#footprint">Your footprint is larger than you think</a></li>
+          <li><a href="#social-exposure">Social media and the signal problem</a></li>
+          <li><a href="#kyc-footprint">KYC, exchanges, and data exposure</a></li>
+          <li><a href="#reduce-surface">Reducing your exposure surface</a></li>
+        </ul>
+      </aside>
+      <article class="article-main prose">
+
+        <section id="footprint">
+          <h2>Your footprint is larger than you think</h2>
+          <p>When I was building criminal cases, we rarely started with a confession or a surveillance photo. We started with fragments. A name on a utility bill. An employer listed in a court record. A city mentioned in a social media bio. A conference badge in a background photo. Individually, each piece meant almost nothing. Assembled into a timeline and a map, they became a targeting package.</p>
+          <p>That is the same process a criminal planning a physical robbery uses. The tool is not a subpoena or a federal database — it is Google, LinkedIn, X, and whatever your exchange or wallet provider leaked in their last data breach. The methodology is identical. The motive is different. The result, for you, can be the same.</p>
+          <p>Most Bitcoin holders significantly underestimate how much of their profile is already assembled and publicly accessible. Your full name is probably attached to a home address through voter registration records or property records, both of which are searchable in most jurisdictions at no cost. Your employer may be visible on LinkedIn. Your general neighborhood or city often appears in your social media accounts even if you never explicitly posted your address. Your interest in Bitcoin — and increasingly, rough estimates of the size of your holdings — may be inferable from your public activity across multiple platforms.</p>
+          <p>None of these data points is alarming in isolation. That is precisely the problem. Criminals are patient researchers. They do not need a single piece of information that proves everything. They need enough overlapping fragments to make a confident targeting decision. The question you should be asking is not "is any one piece of my information dangerous?" It is "what does someone know about me after twenty minutes of open-source research?" That answer is almost always more than people expect.</p>
+          <p>Think about it through the prosecutor's lens: if you were building a dossier on a target, what would you look for? Name, employer, home city, physical description, routine, known associates, visible wealth signals, and known assets. Every element of that list has a digital equivalent that many Bitcoin holders have already made publicly available, piece by piece, across years of ordinary online activity. The aggregation is the threat.</p>
+        </section>
+
+        <section id="social-exposure">
+          <h2>Social media and the signal problem</h2>
+          <p>There is a particular pattern of behavior in Bitcoin communities that creates serious targeting risk, and it is almost entirely normalized. Someone buys Bitcoin or sees a significant price increase and posts about it. Someone attends a conference and shares photos with other attendees, many of whom are publicly identified by name and affiliation. Someone comments in a forum that they have been holding since 2017, or that they wish they had bought more in 2020, or that the current price feels like a good entry point. These feel like ordinary community participation. They are also a targeting signal.</p>
+          <p>The core problem is an asymmetry of audience. When you post in a Bitcoin community, you probably imagine an audience of fellow enthusiasts — people who share your values and your interest. Your actual audience includes anyone with a search engine, any scraper that has indexed the platform, and anyone who has specifically gone looking for Bitcoin holders in your geographic area. The open nature of most Bitcoin discussion spaces is a feature for community building and a vulnerability for personal security.</p>
+          <p>Price celebration posts are particularly high-risk because they signal both that you hold Bitcoin and that you are emotionally engaged with its value. A post celebrating a new all-time high tells a reader two things: you have a position, and you care about its size. Conference photos with name badges or tagged attendees do double work — they identify you as a serious enough participant to travel to an event, and they often associate you with other identifiable holders. Comments about past purchases or holding duration help an observer estimate the rough scale of your position even without account details.</p>
+          <p>The solution is not to never participate in Bitcoin communities. The solution is to think carefully about what participation reveals. There is a meaningful difference between discussing Bitcoin ideas and discussing your personal holdings. There is a difference between attending a conference and broadcasting your attendance to your general social media following. There is a difference between using your real name in spaces where Bitcoin is the context and keeping a clear separation between your identity and your Bitcoin activity.</p>
+          <p>Ask yourself, before posting: does this confirm that I hold Bitcoin? Does this give any signal about quantity or duration? Does this place me geographically or professionally in a way I would not want a stranger to know? The answer will not always require you to stay silent. But the habit of asking the question, consistently, will prevent the most common and avoidable disclosures.</p>
+        </section>
+
+        <section id="kyc-footprint">
+          <h2>KYC, exchanges, and data exposure</h2>
+          <p>Using a regulated exchange in most jurisdictions requires identity verification — Know Your Customer, or KYC. You submit your legal name, date of birth, government-issued identification, home address, and often a photograph. In exchange, you receive the ability to purchase Bitcoin with fiat currency. What you may not fully appreciate is what that record contains, who can access it, and what happens to it when the exchange is breached, sold, or compelled to disclose.</p>
+          <p>Exchange records typically contain the most sensitive possible combination of information: your full legal identity, your home address, and a detailed transaction history that shows exactly how much Bitcoin you purchased and when. For a criminal planning a physical attack, this is not a starting point for further research — it is a completed targeting package. Name, address, approximate holdings, and identity document, all in one file.</p>
+          <p>The risk of this data appearing outside the exchange's systems is not theoretical. Major exchanges have experienced significant data breaches. In some cases, customer information including names, addresses, and account details has been sold on criminal markets or used directly for fraud and physical targeting. The Ledger breach in 2020, which exposed names, addresses, and phone numbers of hardware wallet purchasers, resulted in documented physical threats and attempted robberies against people on that list. That was a hardware vendor, not an exchange. Exchange records are richer.</p>
+          <p>It is important to be precise about the distinction between legal exposure and criminal targeting risk. KYC records exist primarily to support tax compliance and anti-money-laundering law. The legal risk to most holders is not the primary concern here — tax law is a separate subject. The physical security concern is that the same record that satisfies a regulatory requirement also serves as a roadmap for a criminal who obtains it through a breach, an insider, or social engineering. These are different threat models with different solutions, and conflating them leads to confused thinking about what you are actually trying to protect against.</p>
+          <p>The practical implication is that KYC exposure is a largely irreversible fact for most people who have used mainstream exchanges. You cannot un-submit your identity documents. What you can do is understand that this record exists, understand who might obtain it and through what means, and make proportionate decisions about what other information you layer on top of it. A KYC record combined with a public LinkedIn profile, a Bitcoin conference photo, and a home address in voter registration records is a far more complete target profile than a KYC record alone.</p>
+        </section>
+
+        <section id="reduce-surface">
+          <h2>Reducing your exposure surface</h2>
+          <p>Privacy in this context is not a binary condition. You are not either private or exposed. You exist on a continuum, and the practical goal is to move in the direction of reduced exposure — not to achieve some theoretical state of invisibility, but to reduce the number of people who have enough information to consider targeting you, and to make the effort required to build that profile higher than the expected return.</p>
+          <p>Start with what you stop sharing publicly. The most immediately actionable step for most holders is to stop confirming, in public spaces, that they hold Bitcoin in any meaningful quantity. This does not mean pretending Bitcoin does not exist or avoiding all discussion. It means decoupling your public identity from signals about personal holdings. You can discuss Bitcoin ideas, policy, technology, and philosophy without ever indicating that you personally have a position or what that position might be.</p>
+          <p>Consider the separation between your everyday identity and your Bitcoin activity. This does not require a new legal name. It means thinking about which accounts, usernames, and communication channels you use when engaging with Bitcoin communities, and whether those are traceable back to your physical identity and address. A username that shares no common threads with your real name, used on a platform account with no profile photo and no location, in discussions that never reference your employment or hometown, is meaningfully harder to link to your front door than a real-name account with a professional headshot.</p>
+          <p>Think about your household routines and visible signals. Bitcoin is not invisible in the physical world. Conversations overheard in public, hardware wallets or printed paper visible in a home office during video calls, Bitcoin-themed merchandise, and bumper stickers are all signals that contribute to a profile. They are minor signals individually, but they are worth being aware of because they are entirely within your control. Security at the margins is often where proportionate effort pays the highest dividend.</p>
+          <p>For people with meaningful holdings, it is worth thinking about address exposure specifically. Home addresses appear in voter registration records, property records, court filings, and anywhere you have shipped physical goods. You cannot fully eliminate this exposure, but you can make it less convenient to aggregate. Some holders use a PO box or a registered agent address for any correspondence related to Bitcoin products or services. This does not prevent targeting, but it removes one easy data point from the open-source profile that a criminal could build on you.</p>
+          <p>None of this is paranoia. Proportionality is the right frame. A person who holds a few hundred dollars in Bitcoin and discusses it openly under their real name is probably not a meaningful physical target. A person who holds significant value, whose identity is publicly linked to that fact, whose home address is in voter registration records, and whose exchange records have been exposed in a breach is operating with a much higher risk profile than they may realize. Reducing exposure surface is about moving toward a more proportionate posture, not toward a bunker mentality. The goal is deliberate, not fearful.</p>
+        </section>
+
+        <div class="callout">The goal is not invisibility. It is reducing the number of people who could identify you as a target.</div>
+
+        <div class="related">
+          <h2>Related reading</h2>
+          <div class="related-grid">
+            <article class="card">
+              <span class="tag">Related</span>
+              <h3>Good Systems Reduce Rushed Decisions</h3>
+              <a class="jump" href="./good-systems-reduce-rushed-decisions.html">Open page <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="card">
+              <span class="tag">Related</span>
+              <h3>Custody Through a Coercion Lens</h3>
+              <a class="jump" href="./bitcoin-custody-coercion-guide.html">Open page <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="card">
+              <span class="tag">Related</span>
+              <h3>The Danger of Looking Like the Bitcoin Person</h3>
+              <a class="jump" href="./danger-of-looking-like-the-bitcoin-person.html">Open page <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-copy">Hard Target Bitcoin uses consistent navigation, shared metadata patterns, and descriptive internal links across the homepage, hub, and article pages so readers can move predictably through the site and each page is easier to interpret when shared or crawled.</div></footer>
+
+  <script>
+    (function(){const root=document.documentElement;const toggle=document.querySelector('[data-theme-toggle]');let theme='dark';root.setAttribute('data-theme',theme);if(toggle){toggle.addEventListener('click',function(){theme=theme==='dark'?'light':'dark';root.setAttribute('data-theme',theme);toggle.setAttribute('aria-label',theme==='dark'?'Switch to light mode':'Switch to dark mode');toggle.innerHTML=theme==='dark'?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>':'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>';});}})();
+  </script>
+
+</body>
+</html>
