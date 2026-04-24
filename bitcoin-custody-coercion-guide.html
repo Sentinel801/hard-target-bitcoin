@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custody Through a Coercion Lens | Hard Target Bitcoin</title>
+  <meta name="description" content="How custody choices change when physical coercion is part of the threat model. A guide for Bitcoiners who want to think beyond hacking to real-world extraction risk." />
+  <meta property="og:title" content="Custody Through a Coercion Lens | Hard Target Bitcoin" />
+  <meta property="og:description" content="How custody choices change when physical coercion is part of the threat model. A guide for Bitcoiners who want to think beyond hacking to real-world extraction risk." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://hardtargetbitcoin.com/bitcoin-custody-coercion-guide.html" />
+  <meta property="og:image" content="./assets/social-custody.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Custody Through a Coercion Lens | Hard Target Bitcoin" />
+  <meta name="twitter:description" content="How custody choices change when physical coercion is part of the threat model. A guide for Bitcoiners who want to think beyond hacking to real-world extraction risk." />
+  <meta name="twitter:image" content="./assets/social-custody.svg" />
+  <link rel="canonical" href="https://hardtargetbitcoin.com/bitcoin-custody-coercion-guide.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root,[data-theme="light"]{--text-xs:clamp(.75rem,.7rem + .25vw,.875rem);--text-sm:clamp(.875rem,.8rem + .35vw,1rem);--text-base:clamp(1rem,.95rem + .25vw,1.125rem);--text-lg:clamp(1.125rem,1rem + .75vw,1.5rem);--text-xl:clamp(1.5rem,1.2rem + 1.25vw,2.25rem);--text-2xl:clamp(2rem,1.2rem + 2.5vw,3.5rem);--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--space-16:4rem;--space-20:5rem;--color-bg:#f7f6f2;--color-surface:#f9f8f5;--color-surface-2:#fbfbf9;--color-surface-offset:#f3f0ec;--color-border:#d4d1ca;--color-divider:#dcd9d5;--color-text:#28251d;--color-text-muted:#7a7974;--color-text-faint:#bab9b4;--color-primary:#8d6a18;--radius-md:.5rem;--radius-lg:.75rem;--radius-xl:1rem;--radius-full:9999px;--shadow-sm:0 1px 2px rgba(20,18,15,.06);--shadow-md:0 10px 30px rgba(20,18,15,.08);--content-wide:1180px;--content-prose:760px;--font-display:'Instrument Serif',Georgia,serif;--font-body:'Inter',system-ui,sans-serif;--transition:180ms cubic-bezier(0.16,1,0.3,1)}
+    [data-theme="dark"]{--color-bg:#171614;--color-surface:#1c1b19;--color-surface-2:#201f1d;--color-surface-offset:#242320;--color-border:#393836;--color-divider:#262523;--color-text:#e9e4da;--color-text-muted:#a8a39a;--color-text-faint:#6e6a63;--color-primary:#b8891e;--shadow-sm:0 1px 2px rgba(0,0,0,.2);--shadow-md:0 18px 50px rgba(0,0,0,.3)}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;scroll-behavior:smooth}body{font-family:var(--font-body);font-size:var(--text-base);line-height:1.7;background:var(--color-bg);color:var(--color-text);min-height:100dvh;background-image:radial-gradient(circle at top left, rgba(184,137,30,.08), transparent 18%)}img,svg{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:none;transition:color var(--transition),background var(--transition),border-color var(--transition)}button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}h1,h2,h3{font-family:var(--font-display);font-weight:400;letter-spacing:-.03em;line-height:1.05}p{max-width:72ch;text-wrap:pretty}ul{padding-left:1.1rem}li+li{margin-top:.6rem}.container{width:min(calc(100% - 2rem),var(--content-wide));margin-inline:auto}.prose{width:min(calc(100% - 2rem),var(--content-prose));margin-inline:auto}.site-header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--color-bg) 86%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid color-mix(in srgb,var(--color-border) 72%,transparent)}.header-inner{min-height:5rem;display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}.brand{display:flex;align-items:center;gap:var(--space-3);font-size:var(--text-sm);font-weight:700;letter-spacing:.12em;text-transform:uppercase}.brand-mark{width:2.5rem;height:2.5rem;border-radius:var(--radius-md);border:1px solid color-mix(in srgb,var(--color-primary) 45%,var(--color-border));display:grid;place-items:center;background:linear-gradient(180deg,color-mix(in srgb,var(--color-primary) 10%,var(--color-surface)),var(--color-surface))}.brand-mark svg{width:1.15rem;height:1.15rem;color:var(--color-primary)}.header-actions{display:flex;align-items:center;gap:var(--space-3)}.theme-toggle,.nav-link{height:2.75rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;padding-inline:var(--space-5);font-size:var(--text-sm);font-weight:600;border:1px solid var(--color-border);background:var(--color-surface);transition:background var(--transition),border-color var(--transition)}.theme-toggle{width:2.75rem;padding-inline:0;justify-content:center}.theme-toggle:hover,.nav-link:hover{background:var(--color-surface-offset);border-color:color-mix(in srgb,var(--color-primary) 55%,var(--color-border))}.hero{padding-block:var(--space-20) var(--space-12);border-bottom:1px solid var(--color-divider)}.hero .prose{display:flex;flex-direction:column;gap:var(--space-6)}.eyebrow{font-size:var(--text-xs);font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--color-primary)}.hero h1{font-size:var(--text-2xl);color:var(--color-text)}.dek{font-size:var(--text-lg);color:var(--color-text-muted);line-height:1.5}.meta-row{display:flex;flex-wrap:wrap;gap:var(--space-2);padding-top:var(--space-2)}.meta-pill{font-size:var(--text-xs);font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:.35em 1em;border-radius:var(--radius-full);border:1px solid var(--color-border);color:var(--color-text-muted);background:var(--color-surface)}.article-layout{display:grid;grid-template-columns:220px 1fr;gap:var(--space-16);padding-block:var(--space-12) var(--space-20);align-items:start}@media(max-width:860px){.article-layout{grid-template-columns:1fr}.sidebar{display:none}}.sidebar{position:sticky;top:calc(5rem + var(--space-8));font-size:var(--text-sm)}.sidebar h3{font-family:var(--font-display);font-size:1rem;margin-bottom:var(--space-4);color:var(--color-text-muted);letter-spacing:0}.sidebar ul{list-style:none;padding:0}.sidebar li{border-left:2px solid var(--color-border);padding-left:var(--space-4)}.sidebar li+li{margin-top:.5rem;border-top:none}.sidebar a{color:var(--color-text-muted);font-size:var(--text-xs);line-height:1.4;display:block;padding-block:.2rem;transition:color var(--transition)}.sidebar a:hover{color:var(--color-primary)}.article-main section{margin-bottom:var(--space-12)}.article-main section:last-child{margin-bottom:0}.article-main h2{font-size:var(--text-xl);margin-bottom:var(--space-6);color:var(--color-text)}.article-main p{color:var(--color-text-muted);margin-bottom:var(--space-5)}.article-main p:last-child{margin-bottom:0}.callout{margin-block:var(--space-10);padding:var(--space-6) var(--space-8);border-left:3px solid var(--color-primary);background:var(--color-surface);border-radius:0 var(--radius-lg) var(--radius-lg) 0;font-family:var(--font-display);font-size:var(--text-lg);line-height:1.45;color:var(--color-text);font-style:italic}.related{margin-top:var(--space-16);padding-top:var(--space-10);border-top:1px solid var(--color-divider)}.related h2{font-size:var(--text-xl);margin-bottom:var(--space-8)}.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:var(--space-5)}.card{background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-xl);padding:var(--space-6);display:flex;flex-direction:column;gap:var(--space-4);transition:border-color var(--transition),box-shadow var(--transition)}.card:hover{border-color:color-mix(in srgb,var(--color-primary) 60%,var(--color-border));box-shadow:var(--shadow-md)}.card .tag{font-size:var(--text-xs);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--color-primary)}.card h3{font-family:var(--font-display);font-size:1.1rem;font-weight:400;line-height:1.2;color:var(--color-text);flex:1}.card .jump{margin-top:auto;font-size:var(--text-xs);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--color-text-muted);transition:color var(--transition)}.card:hover .jump{color:var(--color-primary)}.site-footer{border-top:1px solid var(--color-divider);padding-block:var(--space-10)}.footer-copy{font-size:var(--text-xs);color:var(--color-text-faint);text-align:center;line-height:1.8}
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://hardtargetbitcoin.com/#organization",
+      "name": "Hard Target Bitcoin",
+      "url": "https://hardtargetbitcoin.com/"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hardtargetbitcoin.com/#founder",
+      "name": "Hard Target Bitcoin Founder",
+      "description": "Founder with 21 years in prosecution and federal investigations focused on criminal risk and security education."
+    },
+    {
+      "@type": "Article",
+      "@id": "https://hardtargetbitcoin.com/bitcoin-custody-coercion-guide.html#primary",
+      "mainEntityOfPage": "https://hardtargetbitcoin.com/bitcoin-custody-coercion-guide.html",
+      "headline": "Custody Through a Coercion Lens",
+      "description": "How custody choices change when physical coercion is part of the threat model. A guide for Bitcoiners who want to think beyond hacking to real-world extraction risk.",
+      "datePublished": "2026-04-23",
+      "dateModified": "2026-04-23",
+      "author": {
+        "@id": "https://hardtargetbitcoin.com/#founder"
+      },
+      "publisher": {
+        "@id": "https://hardtargetbitcoin.com/#organization"
+      },
+      "image": [
+        "https://hardtargetbitcoin.com/assets/social-custody.svg"
+      ]
+    }
+  ]
+}
+  </script>
+</head><body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="./index.html" class="brand" aria-label="Hard Target Bitcoin home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 20 6.5V12c0 5.2-3.2 8.3-8 10-4.8-1.7-8-4.8-8-10V6.5L12 2Z"></path><path d="M8 12h8M12 8v8"></path></svg></span><span>Hard Target Bitcoin</span></a>
+      <div class="header-actions">
+        <a class="nav-link" href="./library-hub.html">Library Hub</a>
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="prose">
+        <div class="eyebrow">Guide</div>
+        <h1>Custody Through a Coercion Lens</h1>
+        <p class="dek">How custody choices change when physical coercion is part of the threat model — thinking beyond hacking to real-world extraction risk.</p>
+        <div class="meta-row"><span class="meta-pill">Guide</span><span class="meta-pill">Custody</span><span class="meta-pill">Coercion</span><span class="meta-pill">Threat Model</span></div>
+      </div>
+    </section>
+    <div class="container article-layout">
+      <aside class="sidebar">
+        <h3>On this page</h3>
+        <ul>
+          <li><a href="#coercion-model">Adding coercion to your threat model</a></li>
+          <li><a href="#speed-test">The speed-of-access problem</a></li>
+          <li><a href="#distribution">Distribution, delay, and coordination</a></li>
+          <li><a href="#plausible-limits">Plausible limits and what they communicate</a></li>
+        </ul>
+      </aside>
+      <article class="article-main prose">
+
+        <section id="coercion-model">
+          <h2>Adding coercion to your threat model</h2>
+          <p>The overwhelming majority of Bitcoin security writing is built around a single attacker profile: remote, anonymous, technically sophisticated, and operating from a safe distance. That threat is real. But it is not the only threat, and for some people — particularly those whose holdings are known or discoverable — it may not even be the most likely one.</p>
+          <p>Physical coercion is different from a cyberattack in almost every relevant dimension. It is fast. It is local. It does not require technical skill, specialized tools, or any particular knowledge of cryptography. What it requires is opportunity, information about a target, and the willingness to apply pressure in person. Those inputs are more widely available than most people want to acknowledge.</p>
+          <p>In twenty-one years as a prosecutor and federal agent, I watched sophisticated financial crimes unfold in spreadsheets, across state lines, over years. I also watched people get robbed in parking lots in under ninety seconds. The second category of crime requires far less from the perpetrator. It requires that the perpetrator have reason to believe the target is worth approaching — and then the nerve to do it.</p>
+          <p>Coercion changes the question you have to answer about your custody setup. Instead of asking whether a remote attacker can break your encryption or social-engineer your exchange, you are asking whether someone standing in your home, with leverage over you or someone you care about, can force you to produce access to your Bitcoin right now. Those are different questions, and they have different answers depending on how your custody is structured.</p>
+          <p>Adding coercion to your threat model does not mean becoming paranoid. It means being honest about the fact that your Bitcoin has value, that value can motivate people to do extreme things, and that some custody arrangements do more than others to slow down or prevent extraction under immediate physical pressure. Building that awareness into your setup — before it becomes relevant — is what this guide is about.</p>
+        </section>
+
+        <section id="speed-test">
+          <h2>The speed-of-access problem</h2>
+          <p>When I was working criminal cases involving financial crimes and extortion, one variable came up consistently: speed. Perpetrators wanted fast access to value. Delays created exposure. The longer a crime took to complete, the more opportunities arose for something to go wrong — a witness, a phone call, a change of mind. Criminals who understood this structured their attacks accordingly. They wanted a path from initial contact to extraction that was as short and frictionless as possible.</p>
+          <p>That same logic applies directly to Bitcoin custody under coercion. The key operational question is not which setup has the strongest cryptographic security in theory. It is which setup produces the fastest path from "someone is standing over you demanding access" to "that person can walk away with your Bitcoin." The faster that path, the worse the outcome for you.</p>
+          <p>Consider the spectrum. A hot wallet on a phone — one that is already unlocked, or protected only by a PIN someone can watch you enter — is a nearly frictionless extraction target. A determined person with physical access to you and your phone can move funds in under two minutes. There is no meaningful delay built into the process. The entire system is optimized for your own convenience, which is indistinguishable from the attacker's convenience.</p>
+          <p>A hardware wallet introduces physical friction. The device has to be present. It usually requires a PIN. Signing a transaction requires deliberate steps. None of this is insurmountable under duress, but it is slower, and it is more likely to require your active cooperation at each stage. That extra cooperation requirement matters, because it creates more moments where the situation might change — you might buy time, someone might intervene, or the attacker might decide the risk isn't worth continuing.</p>
+          <p>Multisignature setups, depending on how they are configured, can introduce coordination requirements that a single person under immediate pressure genuinely cannot satisfy alone. If a 2-of-3 signature scheme requires keys held in geographically separate locations — or held by different people — no amount of pressure on one person in one place produces a complete transaction. That is a structural constraint, not a personal one. It doesn't depend on your composure or your ability to resist under duress. It depends on arithmetic and geography, which are more reliable under stress than human willpower.</p>
+          <p>This is not an argument that any particular setup is objectively better than another for every person in every situation. It is an argument that speed-of-access should be part of the evaluation. When you design your custody, you are not only deciding how convenient it is for you. You are deciding how hard it is to extract under pressure. Those two design goals often point in opposite directions.</p>
+        </section>
+
+        <section id="distribution">
+          <h2>Distribution, delay, and coordination</h2>
+          <p>The most durable protection against coercion-based extraction is not personal resolve. It is structural impossibility. If your custody arrangement is designed so that a single person, in a single location, under immediate pressure, cannot produce a complete transaction — then no amount of coercion applied to one person in one place changes the outcome. That is the logic behind distribution, and it is worth understanding at a conceptual level before getting into any specific technical implementation.</p>
+          <p>Think about what a coercion scenario actually requires from the attacker's perspective. They need to apply pressure to someone who has the ability to give them what they want. If that ability is distributed across multiple parties or locations, the attacker faces a coordination problem they did not expect. They can pressure one person. They cannot simultaneously pressure three people in three cities. The math simply doesn't work in their favor.</p>
+          <p>Geographic distribution of signing keys is one way to build this in. If a 2-of-3 multisig setup has keys held in your home, in a safe deposit box across town, and with a trusted attorney in another state, then coercion applied at your home produces, at most, one of three required signatures. A transaction cannot be broadcast without a second signature. That second signature requires another person in another location, under no duress, to make a deliberate decision to sign. In a coercion scenario, that second party is not present and cannot be compelled to act. The structural ceiling on what can be extracted in real time is zero.</p>
+          <p>Time-locks are a different mechanism with related logic. A time-locked transaction cannot be broadcast before a certain block height or timestamp, regardless of what anyone does or does not sign in the meantime. For a coercer operating under time pressure — and they are almost always operating under time pressure — a system that cannot produce a spendable transaction for hours or days is effectively unextractable in the moment. They cannot wait. Waiting means exposure.</p>
+          <p>Multi-party coordination requirements extend this further. If your custody setup requires deliberate action from a second person who knows what a normal request looks like versus a coerced one, you have built in a human check that operates outside the room where the coercion is happening. That person, if sophisticated, can ask questions, delay signing, initiate contact through a separate channel, or simply not respond. None of that requires heroism from you. It requires that the system was designed with this scenario in mind before it arose.</p>
+          <p>None of this is a technical explainer. The specific implementations vary, and the right configuration depends on your holdings, your situation, and your trusted relationships. The conceptual point is simpler: coercion is a single-point attack. Systems that require coordination across multiple points — physical, temporal, or human — are structurally resistant to it in ways that single-key custody never can be.</p>
+        </section>
+
+        <section id="plausible-limits">
+          <h2>Plausible limits and what they communicate</h2>
+          <p>One of the most underappreciated tools in a coercion scenario is the credible, verifiable claim that you cannot immediately produce what is being demanded. Not that you will not. That you cannot. Those words communicate very different things to a perpetrator who is doing a real-time cost-benefit analysis.</p>
+          <p>In my experience working extortion and robbery cases, perpetrators who believed they had extracted everything available often disengaged more quickly than those who suspected they were being played. A target who plausibly had no more to give was a finished transaction. A target who seemed to be withholding created an incentive to escalate. The structure of your custody — and what it truthfully allows you to say about your own access limitations — affects which category you fall into.</p>
+          <p>This is the functional logic behind decoy wallets and duress PINs. A decoy wallet is a real wallet with a modest balance — not a fake, not an empty account, but a genuine wallet with genuine Bitcoin that would satisfy a low-information attacker's expectations. It is not a lie. It is a real thing that you can produce quickly and completely, after which there is nothing more to produce, because the rest of your funds are held in a structure that genuinely requires processes you cannot complete alone and immediately. The coercer gets something real. They get it fast. And there is no reason embedded in the structure of the interaction to keep pushing.</p>
+          <p>Duress PINs, offered by some hardware wallet manufacturers, operate similarly. A specific PIN unlocks a different wallet — not your primary holdings, but a legitimate secondary wallet with real funds. The PIN is not a signal. It does not alert anyone. It simply opens a different set of accounts. The coercer sees a wallet being unlocked, sees funds present, and completes the transaction they came for. Your primary holdings remain inaccessible because they require a different credential or a different key that is not present.</p>
+          <p>Both approaches work best when they are truthful rather than theatrical. If your secondary wallet holds a trivial amount, a sophisticated attacker may not find it credible. If it holds enough to satisfy a reasonable expectation of what a person of your apparent profile would have in liquid, immediately accessible custody, the interaction has a natural stopping point. That stopping point is valuable. It creates the conditions for disengagement.</p>
+          <p>The broader principle is that the structure of your custody communicates something about what is possible. A setup where everything is accessible, immediately, by one person, tells a coercer that continued pressure produces continued access. A setup where some things are genuinely accessible and others genuinely are not — and where that is verifiable in the moment — tells a different story. Designing toward the second kind of setup is not just a technical decision. It is a decision about what a bad actor learns about you when the worst moment arrives.</p>
+        </section>
+
+        <div class="callout">The question is not which setup is most secure against hackers. It is which setup is hardest to extract under immediate, in-person pressure.</div>
+
+        <div class="related">
+          <h2>Related reading</h2>
+          <div class="related-grid">
+            <article class="card">
+              <span class="tag">Related</span>
+              <h3>Privacy Basics for Bitcoin Holders</h3>
+              <a class="jump" href="./bitcoin-privacy-basics-guide.html">Open page <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="card">
+              <span class="tag">Related</span>
+              <h3>Good Systems Reduce Rushed Decisions</h3>
+              <a class="jump" href="./good-systems-reduce-rushed-decisions.html">Open page <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="card">
+              <span class="tag">Related</span>
+              <h3>Why Coercion Changes Bitcoin Custody</h3>
+              <a class="jump" href="./bitcoin-custody-coercion-guide.html">Open page <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container footer-copy">Hard Target Bitcoin uses consistent navigation, shared metadata patterns, and descriptive internal links across the homepage, hub, and article pages so readers can move predictably through the site and each page is easier to interpret when shared or crawled.</div></footer>
+
+  <script>
+    (function(){const root=document.documentElement;const toggle=document.querySelector('[data-theme-toggle]');let theme='dark';root.setAttribute('data-theme',theme);if(toggle){toggle.addEventListener('click',function(){theme=theme==='dark'?'light':'dark';root.setAttribute('data-theme',theme);toggle.setAttribute('aria-label',theme==='dark'?'Switch to light mode':'Switch to dark mode');toggle.innerHTML=theme==='dark'?'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>':'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>';});}})();
+  </script>
+
+</body>
+</html>
